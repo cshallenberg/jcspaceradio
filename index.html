@@ -8,13 +8,24 @@
 
   </head>
   <body>
-    <script src="sketch.js"></script>
-    
-    <video id="movevideo" src="CTrackRB.mov" onmouseover="PlayVideo('movevideo')" onmouseout="StopVideo('movevideo')">
+
+    <video muted id="movevideo" src="CTrackRB.mov" onmouseover="PlayVideo('movevideo')" onmouseout="StopVideo('movevideo')">
 </video>
-    <video id="watchvideo" src="JTrackRB.mov" onmouseover="PlayVideo('watchvideo')" onmouseout="StopVideo('watchvideo')">
+    <video muted id="watchvideo" src="JTrackRB.mov" onmouseover="PlayVideo('watchvideo')" onmouseout="StopVideo('watchvideo')">
 </video>
-  
-  
+<script>
+
+function PlayVideo(videoobj) {
+    var thisvideo=document.getElementById(videoobj);
+    thisvideo.play();
+}
+
+function StopVideo(videoobj) {
+    var thisvideo=document.getElementById(videoobj);
+    thisvideo.pause();
+}
+</script>
+
+
 
 </body></html>
